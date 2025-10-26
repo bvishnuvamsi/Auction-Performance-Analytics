@@ -13,11 +13,11 @@ The goal is to build a foundation for a predictive valuation model that mimics r
 ```bash
 Auction-Performance-Analytics/
 │
-├── data.txt            # Original data (data.txt)             
-├── processed/          # Cleaned and feature-engineered datasets
+├── data.txt                     # Original data (data.txt)             
+├── auction_cleaned.csv          # Cleaned and feature-engineered datasets
 │ 
-├── 01_EDA.ipynb        # Data cleaning + exploratory analysis
-│
+├── 01_EDA.ipynb                 # Data cleaning + exploratory analysis
+│   
 ├── app/
 │   └── dashboard.py        # (To be added in later phase)
 │
