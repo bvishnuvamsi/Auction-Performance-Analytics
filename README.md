@@ -191,11 +191,43 @@ Performed `RandomizedSearchCV` (10 iterations, 3-fold CV) for `XGBRegressor` usi
 - RMSE: ~1.09
 - Reason: Balanced trade-off between interpretability and performance.
 
+
+### Dashboard (Streamlit)
+
+```bash
+streamlit run app/dashboard.py
+```
+
+Filters: Year range (by sold_year), Artist (top 50), Material
+KPI Cards:
+- Total Sales (sum of price)
+- Lots (count)
+- Average Price
+- Median Price
+- Revenue Concentration – Top Artists’ Share (donut or horizontal bar)
+- Country × Material – Average Price Heatmap (where specific media outperform)
+
+Core Visuals (tabs):
+- Price by Material (toggle: Total Sales / Average Price)
+- Area vs Price (scatter; log-y)
+- Top Artists by Average Sale Price (bar)
+- Country-wise Average Price (bar)
+- Price vs Brightness (scatter; log-y)
+
+> Data assumptions: expects auction_cleaned.csv with price, artist, material, country, brightness, and sold_year (NaN/−1 allowed).
+
 ### Business Takeaways
 - **Temporal Sensitivity**: Newer auctions fetch higher prices; market dynamics evolve rapidly.
 - **Artist Reputation**: Strong positive price correlation; frequency encoding captures this well.
 - **Physical Attributes**: Size and medium influence price but are secondary to provenance and artist.
 - **Model Utility**: The trained model can forecast auction prices for new artworks, aiding valuation, bidding, and portfolio strategy.
+
+### How to Reproduce
+
+1. Run 01_EDA.ipynb → explores data / insights.
+2. Run 02_Feature_Engineering.ipynb → saves auction_cleaned.csv, auction_model_ready.csv.
+3. Run 03_Modeling.ipynb → trains models, prints metrics, saves model + features (optional).
+4. streamlit run app/dashboard.py → interact with KPIs & visuals.
 
 ## References
 ---
