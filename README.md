@@ -15,8 +15,11 @@ Auction-Performance-Analytics/
 │
 ├── data.txt                     # Original data (data.txt)             
 ├── auction_cleaned.csv          # Cleaned and feature-engineered datasets
+├── auction_model_readt.csv      # feature-engineered datasets for modeling
 │ 
-├── 01_EDA.ipynb                 # Data cleaning + exploratory analysis
+├── EDA.ipynb                    # Data cleaning + exploratory analysis
+├── Feature_Engineering.ipynb    # Extracted Feartures for Modeling
+├── Modeling.ipynb               # Applied different ML Models
 │   
 ├── app/
 │   └── dashboard.py        # (To be added in later phase)
