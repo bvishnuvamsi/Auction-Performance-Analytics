@@ -20,9 +20,7 @@ Auction-Performance-Analytics/
 ├── EDA.ipynb                    # Data cleaning + exploratory analysis
 ├── Feature_Engineering.ipynb    # Extracted Feartures for Modeling
 ├── Modeling.ipynb               # Applied different ML Models
-│   
-├── app/
-│   └── dashboard.py        # (To be added in later phase)
+├── dashboard.py                 # To view the basic Business processes
 │
 ├── README.md
 └── requirements.txt
